@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <Button
         android:id="@+id/backButton"
@@ -23,6 +23,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
         android:text="@string/details_name"
+        android:textColor="#FFFFFF"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/details_init"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/characterNameText"
         app:layout_constraintTop_toBottomOf="@id/characterNameText" />
@@ -44,6 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/details_current_hp"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/initiativeText"
         app:layout_constraintTop_toBottomOf="@id/initiativeText" />
@@ -54,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/details_maxHp"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/currentHealthText"
         app:layout_constraintTop_toBottomOf="@id/currentHealthText" />
@@ -64,6 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/details_notes"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/maxHealthText"
@@ -77,6 +82,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:text="Notes will go here later."
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/details_statuses"
+        android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/notesTitleText"
@@ -101,6 +108,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:text="Status effects will go here later."
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

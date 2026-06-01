@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/medieval_tavern">
 
     <TextView
         android:id="@+id/encounterTitleText"
@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/txt_title2"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +27,8 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:hint="Search Encounters"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +41,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="24dp"
+        android:background="#6C6C6C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +55,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/encounter_name"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +70,8 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
         android:hint="@string/description"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
