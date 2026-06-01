@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Initiative Tracker</string>
+    <string name="txt_title">Initiative Tracker App</string>
+    <string name="login_name">Username</string>
+    <string name="login_pw">Password</string>
+    <string name="register_btn">Create an Account</string>
+    <string name="login_btn">Login</string>
+    <string name="txt_title2">Encounters</string>
+    <string name="encounter_name">Encounter Name</string>
+    <string name="description">Description</string>
+    <string name="addEncounter_btn">Add Encounter</string>
+    <string name="back_btn">Back to Encounters</string>
+    <string name="addChar_btn">Add Character/NPC</string>
+    <string name="char_name">Name</string>
+    <string name="initiative">Initiative</string>
+    <string name="current_hp">Current Health</string>
+    <string name="max_hp">Max Health</string>
+</resources>
