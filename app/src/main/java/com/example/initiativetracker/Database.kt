@@ -177,7 +177,7 @@ class Database(context: Context) :
             val currentHealth = cursor.getInt(2)
             val maxHealth = cursor.getInt(3)
 
-            list.add("$name | Init: $initiative | HP: $currentHealth/$maxHealth")
+            list.add("$name | Initiative: $initiative | HP: $currentHealth/$maxHealth")
         }
 
         cursor.close()

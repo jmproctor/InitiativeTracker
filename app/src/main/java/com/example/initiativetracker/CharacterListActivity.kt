@@ -62,6 +62,7 @@ class CharacterListActivity : AppCompatActivity() {
             val maxHealth = maxHealthInput.text.toString().toIntOrNull()
             val currentHealth = currentHealthInput.text.toString().toIntOrNull()
 
+
             if (
                 name.isBlank() ||
                 initiative == null ||

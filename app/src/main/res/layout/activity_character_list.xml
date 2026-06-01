@@ -63,19 +63,6 @@
         app:layout_constraintTop_toBottomOf="@id/characterNameInput" />
 
     <EditText
-        android:id="@+id/maxHealthInput"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:hint="@string/max_hp"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/initiativeInput" />
-
-    <EditText
         android:id="@+id/currentHealthInput"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -86,7 +73,20 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/maxHealthInput" />
+        app:layout_constraintTop_toBottomOf="@id/initiativeInput" />
+
+    <EditText
+        android:id="@+id/maxHealthInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/max_hp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentHealthInput" />
 
     <Button
         android:id="@+id/addCharacterButton"
@@ -98,6 +98,6 @@
         android:text="@string/addChar_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/currentHealthInput" />
+        app:layout_constraintTop_toBottomOf="@id/maxHealthInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
