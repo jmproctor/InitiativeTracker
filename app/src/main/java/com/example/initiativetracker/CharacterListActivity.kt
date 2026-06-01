@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 
 class CharacterListActivity : AppCompatActivity() {
@@ -43,8 +44,8 @@ class CharacterListActivity : AppCompatActivity() {
 
         fun loadCharacters() {
 
-            val characterListData =
-                db.getCharacterNames(encounterId)
+            val characterListData = db.getCharacterNames(encounterId)
+            val characterIds = db.getCharacterIds(encounterId)
 
             val adapter = ArrayAdapter(
                 this,
@@ -53,6 +54,13 @@ class CharacterListActivity : AppCompatActivity() {
             )
 
             characterList.adapter = adapter
+
+            characterList.setOnItemClickListener { _, _, position, _ ->
+                val intent = Intent(this, DetailsActivity::class.java)
+                intent.putExtra("characterId", characterIds[position])
+
+                startActivity(intent)
+            }
         }
 
         addCharacterButton.setOnClickListener {

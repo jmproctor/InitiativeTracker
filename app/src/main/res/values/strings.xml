@@ -15,4 +15,11 @@
     <string name="initiative">Initiative</string>
     <string name="current_hp">Current Health</string>
     <string name="max_hp">Max Health</string>
+    <string name="details_name">Character Name</string>
+    <string name="details_init">Initiative:</string>
+    <string name="details_maxHp">Max Health:</string>
+    <string name="details_notes">Notes</string>
+    <string name="details_statuses">Status Effects</string>
+    <string name="backToEncounterBtn">Back</string>
+    <string name="details_current_hp">Current Health:</string>
 </resources>

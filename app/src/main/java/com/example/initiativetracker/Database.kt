@@ -183,4 +183,54 @@ class Database(context: Context) :
         cursor.close()
         return list
     }
+
+    fun getCharacterIds(encounterId: Int): ArrayList<Int> {
+        val list = ArrayList<Int>()
+        val db = readableDatabase
+
+        val cursor = db.rawQuery(
+            """
+        SELECT character_id
+        FROM Characters
+        WHERE encounter_id = ?
+        ORDER BY initiative DESC
+        """,
+            arrayOf(encounterId.toString())
+        )
+
+        while (cursor.moveToNext()) {
+            list.add(cursor.getInt(0))
+        }
+
+        cursor.close()
+        return list
+    }
+    //Pulls Character Details for the Details Page
+    fun getCharacterDetails(characterId: Int): ArrayList<String> {
+
+        val details = ArrayList<String>()
+        val db = readableDatabase
+        val cursor = db.rawQuery(
+            """
+        SELECT character_name,
+               initiative,
+               current_health,
+               max_health
+        FROM Characters
+        WHERE character_id = ?
+        """,
+            arrayOf(characterId.toString())
+        )
+
+        if (cursor.moveToFirst()) {
+            details.add(cursor.getString(0))
+            details.add(cursor.getInt(1).toString())
+            details.add(cursor.getInt(2).toString())
+            details.add(cursor.getInt(3).toString())
+        }
+
+        cursor.close()
+
+        return details
+    }
 }
