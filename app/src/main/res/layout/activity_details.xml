@@ -22,10 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
+        android:layout_marginEnd="181dp"
         android:text="@string/details_name"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backButton" />
 
@@ -34,9 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="306dp"
         android:text="@string/details_init"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/characterNameText"
         app:layout_constraintTop_toBottomOf="@id/characterNameText" />
 
@@ -45,9 +49,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="251dp"
         android:text="@string/details_current_hp"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/initiativeText"
         app:layout_constraintTop_toBottomOf="@id/initiativeText" />
 
@@ -56,9 +62,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="279dp"
         android:text="@string/details_maxHp"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/currentHealthText"
         app:layout_constraintTop_toBottomOf="@id/currentHealthText" />
 
@@ -67,10 +75,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="326dp"
         android:text="@string/details_notes"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/maxHealthText"
         app:layout_constraintTop_toBottomOf="@id/maxHealthText" />
 
@@ -93,10 +103,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="245dp"
         android:text="@string/details_statuses"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/notesTitleText"
         app:layout_constraintTop_toBottomOf="@id/notesText" />
 
