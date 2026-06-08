@@ -22,4 +22,5 @@
     <string name="details_statuses">Status Effects</string>
     <string name="backToEncounterBtn">Back</string>
     <string name="details_current_hp">Current Health:</string>
+    <string name="delete_btn">Delete Character</string>
 </resources>

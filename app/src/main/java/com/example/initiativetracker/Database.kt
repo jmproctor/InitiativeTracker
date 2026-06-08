@@ -233,4 +233,14 @@ class Database(context: Context) :
 
         return details
     }
+
+    fun deleteCharacter(characterId: Int): Boolean {
+        val db = writableDatabase
+
+        return db.delete(
+            "Characters",
+            "character_id = ?",
+            arrayOf(characterId.toString())
+        ) > 0
+    }
 }
