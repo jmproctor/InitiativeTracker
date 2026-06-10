@@ -34,7 +34,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="24dp"
-        android:background="#6C6C6C"
         android:cacheColorHint="#FFFFFF"
         android:contextClickable="false"
         android:visibility="visible"

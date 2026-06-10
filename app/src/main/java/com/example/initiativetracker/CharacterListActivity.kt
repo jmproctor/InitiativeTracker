@@ -16,13 +16,14 @@ class CharacterListActivity : AppCompatActivity() {
 
     private var encounterId: Int = -1
     private var encounterName: String = ""
-
+    private lateinit var characterList: ListView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_list)
 
         db = Database(this)
 
+        characterList = findViewById(R.id.characterList)
         encounterId = intent.getIntExtra("encounterId", -1)
         encounterName = intent.getStringExtra("encounterName") ?: ""
 
@@ -40,28 +41,7 @@ class CharacterListActivity : AppCompatActivity() {
         val maxHealthInput = findViewById<EditText>(R.id.maxHealthInput)
         val currentHealthInput = findViewById<EditText>(R.id.currentHealthInput)
         val addCharacterButton = findViewById<Button>(R.id.addCharacterButton)
-        val characterList = findViewById<ListView>(R.id.characterList)
 
-        fun loadCharacters() {
-
-            val characterListData = db.getCharacterNames(encounterId)
-            val characterIds = db.getCharacterIds(encounterId)
-
-            val adapter = ArrayAdapter(
-                this,
-                R.layout.list_item_color,
-                characterListData
-            )
-
-            characterList.adapter = adapter
-
-            characterList.setOnItemClickListener { _, _, position, _ ->
-                val intent = Intent(this, DetailsActivity::class.java)
-                intent.putExtra("characterId", characterIds[position])
-
-                startActivity(intent)
-            }
-        }
 
         addCharacterButton.setOnClickListener {
 
@@ -96,7 +76,26 @@ class CharacterListActivity : AppCompatActivity() {
                 loadCharacters()
             }
         }
-
-        loadCharacters()
     }
+        override fun onResume() {
+            super.onResume()
+            loadCharacters()
+        }
+
+        private fun loadCharacters() {
+            val characters = db.getCharacters(encounterId)
+
+            val adapter = CharacterAdapter(this, characters)
+
+            characterList.adapter = adapter
+
+            characterList.setOnItemClickListener { _, _, position, _ ->
+                val intent = Intent(this, DetailsActivity::class.java)
+                intent.putExtra("characterId", characters[position].id)
+                startActivity(intent)
+            }
+
+
+    }
+
 }

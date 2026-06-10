@@ -243,4 +243,34 @@ class Database(context: Context) :
             arrayOf(characterId.toString())
         ) > 0
     }
+
+    fun getCharacters(encounterId: Int): ArrayList<CharacterData> {
+        val list = ArrayList<CharacterData>()
+        val db = readableDatabase
+
+        val cursor = db.rawQuery(
+            """
+        SELECT character_id, character_name, initiative, current_health, max_health
+        FROM Characters
+        WHERE encounter_id = ?
+        ORDER BY initiative DESC
+        """,
+            arrayOf(encounterId.toString())
+        )
+
+        while (cursor.moveToNext()) {
+            list.add(
+                CharacterData(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getInt(2),
+                    cursor.getInt(3),
+                    cursor.getInt(4)
+                )
+            )
+        }
+
+        cursor.close()
+        return list
+    }
 }
