@@ -273,4 +273,14 @@ class Database(context: Context) :
         cursor.close()
         return list
     }
+
+    fun updateCharacterHealth(characterId: Int, newHealth: Int): Boolean {
+        val db = writableDatabase
+
+        val values = ContentValues().apply { put("current_health", newHealth) }
+
+        return db.update(
+            "Characters", values,
+            "character_id = ?", arrayOf(characterId.toString())) > 0
+    }
 }

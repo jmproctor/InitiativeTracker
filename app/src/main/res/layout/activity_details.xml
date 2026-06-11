@@ -82,19 +82,55 @@
         app:layout_constraintStart_toStartOf="@id/currentHealthText"
         app:layout_constraintTop_toBottomOf="@id/currentHealthText" />
 
+    <EditText
+        android:id="@+id/healthChangeInput"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="112dp"
+        android:hint="@string/heal_damage"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/notesText"
+        app:layout_constraintEnd_toStartOf="@+id/damageButton"
+        app:layout_constraintStart_toEndOf="@+id/healButton" />
+
+    <Button
+        android:id="@+id/damageButton"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="271dp"
+        android:layout_marginEnd="24dp"
+        android:text="Damage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteCharacterButton" />
+
+    <Button
+        android:id="@+id/healButton"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="31dp"
+        android:text="Heal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxHealthText" />
+
     <TextView
         android:id="@+id/notesTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="326dp"
         android:text="@string/details_notes"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/maxHealthText"
-        app:layout_constraintTop_toBottomOf="@id/maxHealthText" />
+        app:layout_constraintTop_toBottomOf="@+id/healButton" />
 
     <TextView
         android:id="@+id/notesText"
