@@ -62,7 +62,7 @@ Video Demonstration: (https://youtu.be/rm_TNJBiCh0)
 
 ### Character Details Screen
 
-I don't currently have an up to date screen shot and am not able to gtet emulators to run properly to get it
+I don't currently have an up to date screen shot and am not able to get emulators to run properly to get it
 
 ## Future Enhancements
 
